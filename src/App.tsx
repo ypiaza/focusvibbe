@@ -5,17 +5,18 @@ import Pomodoro from "./components/Pomodoro"
 import Sugestions from "./components/Sugestions"
 
 const App = () => {
+  const focus = false;
   return (
-    <div className="flex flex-col w-full h-screen bg-[#1a1a1a]">
-      <Header />
-      <div className="grid grid-cols-3 h-full">
+    <div className={`flex flex-col w-full h-screen bg-[#0F0F0F]`}>
+      <Header focus={focus} />
+      <main  className="grid grid-cols-3 h-full p-2 gap-2">
         <Pomodoro />
         <div className="grid grid-rows-2">
           <PlayerSong />
           <Sugestions />
         </div>
         <Notes />
-      </div>
+      </main >
     </div>
   )
 }
