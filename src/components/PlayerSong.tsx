@@ -1,10 +1,11 @@
+import { btnList } from "../data/data"
+
 const PlayerSong = () => {
   return (
     <div className="grid grid-cols-2 gap-1">
-      <div className="border border-white/10 rounded-2xl bg-[#1a1a1a]"></div>
-      <div className="border border-white/10 rounded-2xl bg-[#1a1a1a]"></div>
-      <div className="border border-white/10 rounded-2xl bg-[#1a1a1a]"></div>
-      <div className="border border-white/10 rounded-2xl bg-[#1a1a1a]"></div>
+      {btnList.map((btn) => (
+        <div key={btn.name} className={`flex items-center justify-center border text-4xl text-white/50 cursor-pointer border-white/10 rounded-2xl bg-[#${btn.color}]`}><btn.icon /></div>
+      ))}
     </div>
   )
 }
