@@ -17,9 +17,9 @@ const PlayerSong = () => {
           <div
             key={btn.name}
             onClick={() => handleClick(btn.name)}
-            style={isActive ? {backgroundColor: `${btn.color}`, boxShadow: `10px 10px 1px rgba(${btn.color, 0.6})`} : {}}
+            style={isActive ? {backgroundColor: `rgba(255, 255, 255, 0.3)`, boxShadow: `0px 0px 50px rgba(255, 255, 255, 0.3)`} : {}}
             className={`flex items-center justify-center border text-4xl cursor-pointer border-white/10 rounded-2xl bg-[#1a1a1a] transition-colors duration-300
-              ${isActive ? `text-white scale-90` : "text-white/50"}
+              ${isActive ? `text-white scale-95` : "text-white/50"}
             `}
           >
             <Icon />

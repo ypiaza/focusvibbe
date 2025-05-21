@@ -11,11 +11,11 @@ const App = () => {
       <Header focus={focus} />
       <main  className="grid grid-cols-3 h-full p-2 gap-2">
         <Pomodoro />
+        <Notes />
         <div className="grid grid-rows-2 gap-2">
           <Sugestions />
           <PlayerSong focus={focus}/> 
         </div>
-        <Notes />
       </main >
     </div>
   )
