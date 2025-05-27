@@ -6,8 +6,8 @@ import Pomodoro from "./components/Pomodoro";
 import Sugestions from "./components/Sugestions";
 
 const App = () => {
-  const focusTime = 25;
-  const breakTime = 5;
+  const focusTime = 25 * 60;
+  const breakTime = 5 * 60;
 
   const [time, setTime] = useState(focusTime);
   const [isRunning, setIsRunning] = useState(false);
