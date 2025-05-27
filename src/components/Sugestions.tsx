@@ -13,7 +13,7 @@ const Sugestions = () => {
   }, [])
 
   return (
-    <div className="border bg-[#1da5c4] shadow-2xl shadow-[#00D0FF]/50 border-white/10 rounded-2xl flex items-center justify-center p-10 transition-all duration-300">
+    <div className="border h-full bg-[#1da5c4]/50 border-white/10 flex items-center justify-center p-10 transition-all duration-300">
         <p className="font-bold text-2xl text-white/80 text-center">
           {focusTips[motivation].text}
         </p>

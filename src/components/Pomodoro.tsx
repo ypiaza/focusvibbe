@@ -12,7 +12,7 @@ const Pomodoro: React.FC<PomodoroTimer> = ({ time, cycle, isRunning, onToggle })
   const seconds = time % 60;
 
   return (
-    <div className="grid grid-rows-2 h-full w-full border bg-[#1a1a1a] border-white/10 rounded-2xl">
+    <div className="grid grid-cols-2 w-full h-full border bg-[#1a1a1a] border-white/10">
       <div className="flex flex-col items-center justify-center gap-3 p-8">
         <div className="border-4 border-white/70 rounded-2xl h-16 w-[70%] overflow-hidden">
           <div className="h-full bg-[#51E41B]/70 rounded transition-all duration-500"

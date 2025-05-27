@@ -6,7 +6,7 @@ import Pomodoro from "./components/Pomodoro";
 import Sugestions from "./components/Sugestions";
 
 const App = () => {
-  const focusTime = 25 ;
+  const focusTime = 25;
   const breakTime = 5;
 
   const [time, setTime] = useState(focusTime);
@@ -45,19 +45,29 @@ const App = () => {
   }, [isRunning, isFocus]);
 
   return (
-    <div className="flex flex-col w-full h-screen bg-[#0F0F0F]">
+    <div className="flex flex-col w-full h-screen bg-[#1a1a1a]">
       <Header focus={isFocus} />
-      <main className="grid grid-cols-3 h-full p-2 gap-2">
-        <Pomodoro
-          time={time}
-          cycle={cycle}
-          isRunning={isRunning}
-          onToggle={toggleTimer}
-        />
-        <Notes />
-        <div className="grid grid-rows-2 gap-2">
-          <Sugestions />
-          <PlayerSong />
+      <main className="grid grid-cols-2 h-full p-0.5 gap-0.5  overflow-hidden">
+        <div className="flex flex-col gap-0.5 overflow-hidden">
+          <div className="flex-1 overflow-hidden">
+            <Pomodoro
+              time={time}
+              cycle={cycle}
+              isRunning={isRunning}
+              onToggle={toggleTimer}
+            />
+          </div>
+          <div className="flex-1 overflow-hidden">
+            <Sugestions />
+          </div>
+        </div>
+        <div className="flex flex-col gap-0.5  overflow-hidden">
+          <div className="flex-1 overflow-hidden">
+            <PlayerSong />
+          </div>
+          <div className="flex-1 overflow-hidden">
+            <Notes />
+          </div>
         </div>
       </main>
     </div>
